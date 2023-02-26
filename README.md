@@ -62,6 +62,8 @@ Or the try out the version with a custom titlebar using:
 ```
 deuteron --title "Hello Deuteron!" --no-decorations --webview-url ./example/index-titlebar.html ./example/backend.ts 
 ```
+![image](https://user-images.githubusercontent.com/9715316/221430491-ec1cd5df-b966-46d5-a093-d87f20a8cc9f.png)
+
 
 # IPC
 
