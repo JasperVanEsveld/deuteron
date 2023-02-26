@@ -13,14 +13,14 @@ async function checkExists(path: string) {
 }
 
 async function prepareDenoWebview() {
-  let bin = localStorage.getItem("deutron-binary");
+  let bin = localStorage.getItem("deuteron-binary");
   if (bin === null || !(await checkExists(bin))) {
     if (Deno.build.os !== "windows") {
       console.log("Sorry only Windows is supported at the moment");
     }
     console.log("Deno-webview binary not found, downloading...");
-    bin = await Deno.makeTempFile({ prefix: "deutron" });
-    localStorage.setItem("deutron-binary", bin);
+    bin = await Deno.makeTempFile({ prefix: "deuteron" });
+    localStorage.setItem("deuteron-binary", bin);
     const file = await Deno.open(bin, {
       write: true,
       create: true,
