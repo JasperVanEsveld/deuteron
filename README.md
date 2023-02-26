@@ -24,7 +24,7 @@ The modified Deno binary comes from [this fork](https://github.com/JasperVanEsve
 
 Compile a Deno project, for example `your_backend.ts`
 ```
-deno run --allow-read --allow-write --allow-net --allow-run https://deno.land/x/deuteron@1.0 ./your_backend.ts
+deno run --allow-read --allow-write --allow-net --allow-run https://deno.land/x/deuteron@1.0/mod.ts ./your_backend.ts
 ```
 
 Or first install deuteron
