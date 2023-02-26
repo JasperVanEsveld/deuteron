@@ -1,16 +1,17 @@
+
 ---
 
 > ⚠️ This project is a proof of concept to show how an Electron like experience can be achieved using Deno.
 
 ---
 
-# Deutron
+# Deuteron
 
 Electron has had a large impact on the development of desktop application.
 Allowing for both backend and frontend to be written in javascript.
 
 While Electron uses node, there has not been a similar alternative that uses Deno.
-This is what `Deutron` aims to solve, however instead of using chromium it uses webview.
+This is what `Deuteron` aims to solve, however instead of using chromium it uses webview.
 
 There has been a discussion for a standard GUI, and in my eyes something like this would be perfect. Hopefully this project can be an inspiration to implement something similar into Deno officially.
 
@@ -23,23 +24,23 @@ The modified Deno binary comes from [this fork](https://github.com/JasperVanEsve
 
 Compile a Deno project, for example `your_backend.ts`
 ```
-deno run --allow-read --allow-write --allow-net --allow-run https://deno.land/x/deutron@1.0 ./your_backend.ts
+deno run --allow-read --allow-write --allow-net --allow-run https://deno.land/x/deuteron@1.0 ./your_backend.ts
 ```
 
-Or first install deutron
+Or first install deuteron
 ```
-deno install --allow-read --allow-write --allow-net --allow-run -n deutron https://deno.land/x/deutron@1.0/mod.ts
+deno install --allow-read --allow-write --allow-net --allow-run -n deuteron https://deno.land/x/deuteron@1.0/mod.ts
 ```
 And compile using
 ```
-deutron ./your_backend.ts
+deuteron ./your_backend.ts
 ```
 
 # Options
 
-Deutron is basically a wrapper around the `compile` command from Deno, check [here](https://deno.land/manual@v1.31.1/tools/compiler) for it's documentation.
+Deuteron is basically a wrapper around the `compile` command from Deno, check [here](https://deno.land/manual@v1.31.1/tools/compiler) for it's documentation.
 
-Deutron adds a few more flags:
+Deuteron adds a few more flags:
 
 - `--title`: The title of the application (default: Webview)
 - `--webview-url`: The path to a html file, can be relative, absolute or remote (default: ./index.html)
@@ -55,11 +56,11 @@ The `example` directory includes a small project that sends a webview message to
 
 To compile it into an executable, run:
 ```
-deutron --title "Hello Deutron!" --webview-url ./example/index.html ./example/backend.ts 
+deuteron --title "Hello Deuteron!" --webview-url ./example/index.html ./example/backend.ts 
 ```
 Or the try out the version with a custom titlebar using:
 ```
-deutron --title "Hello Deutron!" --no-decorations --webview-url ./example/index-titlebar.html ./example/backend.ts 
+deuteron --title "Hello Deuteron!" --no-decorations --webview-url ./example/index-titlebar.html ./example/backend.ts 
 ```
 
 # IPC
