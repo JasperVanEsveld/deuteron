@@ -1,0 +1,70 @@
+<!--This example is similar to the one from WRY: https://github.com/tauri-apps/wry/blob/dev/examples/custom_titlebar.rs -->
+<!DOCTYPE html>
+<html>
+  <script src="./frontend.js" defer></script>
+  <head>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+      }
+      .content {
+        margin: 8px;
+      }
+      .titlebar {
+        height: 30px;
+        padding-left: 5px;
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-columns: 1fr max-content max-content max-content;
+        align-items: center;
+        background: #1f1f1f;
+        color: white;
+        user-select: none;
+      }
+      .titlebar-button {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+      }
+      .titlebar-button:hover {
+        background: #3b3b3b;
+      }
+      .titlebar-button#close:hover {
+        background: #da3d3d;
+      }
+      .titlebar-button img {
+        filter: invert(100%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="titlebar">
+      <div class="drag-region">Custom Titlebar</div>
+      <div>
+        <div class="titlebar-button" onclick="window.webview.minimize()">
+          <img src="https://api.iconify.design/codicon:chrome-minimize.svg" />
+        </div>
+        <div class="titlebar-button" onclick="window.webview.maximize()">
+          <img src="https://api.iconify.design/codicon:chrome-maximize.svg" />
+        </div>
+        <div
+          class="titlebar-button"
+          id="close"
+          onclick="window.webview.close()"
+        >
+          <img src="https://api.iconify.design/codicon:close.svg" />
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <p id="received">Nothing received yet...</p>
+      <input id="input" type="text" />
+      <button onclick="submit()">Send to Deno</button>
+    </div>
+  </body>
+</html>
