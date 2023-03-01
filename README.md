@@ -18,7 +18,7 @@ There has been a discussion for a standard GUI, and in my eyes something like th
 ## How does it work
 
 This project is mainly a wrapper around the `compile` command of Deno with some modifications.
-The modified Deno binary comes from [this fork](https://github.com/JasperVanEsveld/deno), which adds webview support using [WRY](https://github.com/tauri-apps/wry).
+The modified Deno binary comes from [this fork](https://github.com/JasperVanEsveld/deno/tree/webview), which adds webview support using [WRY](https://github.com/tauri-apps/wry).
 
 # Install and compile
 
